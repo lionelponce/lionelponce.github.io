@@ -39,13 +39,13 @@ h2 {
     border-radius: .3rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     .button {
         display: inline-block;
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     .container {
         max-width: 1024px;
         margin: 0 auto;
@@ -90,7 +90,7 @@ body {
 
 #hero {
     position: relative;
-    background: url('/img/binary1920.jpg');
+    background: url('../img/binary1920.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -112,7 +112,7 @@ body {
     background: #00000090;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     #hero::before {
         width: 1024px;
         height: 100vh;
@@ -150,13 +150,19 @@ body {
     max-width: 36rem;
 }
 
-@media (min-width: 700px) {
-    #skills .box {
-        display: flex;
-        justify-content: center;
-    }
+#skills .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+@media (min-width: 768px) {
+#skills .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+}
 .skill img {
     min-width: 13rem;
     min-height: 13rem;
@@ -180,7 +186,7 @@ body {
     padding: 2rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     #projects .box {
         display: flex;
         justify-content: center;
@@ -195,7 +201,7 @@ body {
     background-color: #fff;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     #projects .card {
         max-width: 50rem;
         flex-direction: row;
@@ -210,7 +216,7 @@ body {
     background: deeppink;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     #projects .card img {
         width: 11rem;
     }
@@ -221,7 +227,7 @@ body {
     text-align: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     #projects .card .text {
         padding: 1rem;
         text-align: left;
@@ -248,7 +254,7 @@ body {
 /* C O N T A C T */
 
 #contact {
-    background: url('/img/meeting1280.jpg');
+    background: url('../img/meeting1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60% center;
@@ -258,8 +264,15 @@ body {
 }
 
 #contact form {
+    width: 100%;
+    margin: 0 auto;
     background: #00000090;
     padding: 1rem 2rem;
+}
+@media (min-width: 768px) {
+    #contact form {
+        max-width: 60%;
+    }
 }
 
 #contact form .inputgroup {
